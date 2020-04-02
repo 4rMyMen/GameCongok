@@ -3,26 +3,14 @@ class skill{
     private:
         int skill_id;
         int lv;
+        int type;//buff/heal/damage
 
 }
 
 struct buffstr{
     int bufftype;
-    /*
-        0 Patk
-        1 Pdef
-        2 Matk
-        3 Mdef
-        4 fire add
-        5 ice add
-        6 thn add
-        7 fire def
-        8 ice def
-        9 thn def
-        10 crit chance
-        11 critup
-    */
     int value;
+    int duration;
 }
 
 class entity{
@@ -37,6 +25,7 @@ class entity{
         int evasion;
         int Const;
         int Speed;
+        
         //battle stat 
         int atktype; //0 slash 1 stab 2 blunt
         int Mdef;
@@ -48,6 +37,7 @@ class entity{
         int basethn;
         bool isdefend;
         List<buff>bufflist
+        float threat;//faktor AI dari rataan damage nanti disebar awalnya rata satu tim 20pc
         //special stat
         int cutres;
         int stabres;
@@ -61,7 +51,9 @@ class entity{
         
     public:
         void skill(s_id,lv)
-        void attack(entity target,int damage_type,bool ispure,double base_multiplier){
+        //damage type1 mag/phys
+        //damage type2 null/cut/blunt/stab
+        void attack(entity target,int damage_type1,int damage_type2,bool ispure,double base_multiplier){
             if(random.Next(100)<=target.getEva()){
                 //hit
                 double mult[100]
@@ -89,16 +81,19 @@ class entity{
                 targetmult[4]=double(basefire);//fir element
                 targetmult[5]=double(baseice);//ice element
                 targetmult[6]=double(basethn);//thn element
-                targetmult[7]=double(fireres);//fir resistance
-                targetmult[8]=double(iceres);//ice resistance
-                targetmult[9]=double(thnres);//thn resistance
+                targetmult[7]=double(fireres)/100;//fir resistance
+                targetmult[8]=double(iceres)/100;//ice resistance
+                targetmult[9]=double(thnres)/100;//thn resistance
                 targetmult[10]=10.0;//crit chance
                 targetmult[11]=1.50;//crit damage
+                targetmult[12]=double(target.getcres())/100;//fir resistance
+                targetmult[13]=double(target.getbres())/100;//ice resistance
+                targetmult[14]=double(target.getsres())/100;//thn resistance
                  defmultiplier=1*double()/100;
                 foreach (buff in target.bufflist){
                     targetmult[buff.bufftype]+=buff.value;                    
                 }
-                if(damage_type==0){//phys
+                if(damage_type1==0){//phys
                     if(mult[0])atkmultiplier*=mult[0];
                     if(targetmult[1])defmultiplier*=targetmult[1];
                 }
@@ -106,19 +101,31 @@ class entity{
                     if(mult[2])atkmultiplier*=mult[2];
                     if(targetmult[3])defmultiplier*=targetmult[3];
                 }
-                if(random.Next(100)<=mult[10])atkmultiplier*=mult[11];
-                double damage=1;
-                if(damage_type==0){//phys
-                    damage=1.5*double(Patk)*atkmultiplier-double(target.Pdef)*defmultiplier;
-                    damage+=mult[4]*targetmult[7]+mult[5]*targetmult[8]+mult[6]*targetmult[9]    
+                if(ispure){
+                    if(damage_type==0){//phys
+                        damage=1.5*double(Patk)*atkmultiplier
+                        damage+=mult[4]+mult[5]+mult[6]  
+                    }
+                    else{//mag
+                        if(mult[2])atkmultiplier*=mult[2];
+                        if(damage_type2==1)atkmultiplier*=targetmult[12]
+                        if(damage_type2==2)atkmultiplier*=targetmult[13]
+                        if(damage_type2==3)atkmultiplier*=targetmult[14]
+                        if(targetmult[3])defmultiplier*=targetmult[3];
                 }
-                else{//mag
-                    if(mult[2])atkmultiplier*=mult[2];
-                    if(targetmult[3])defmultiplier*=targetmult[3];
-                }
-                if(target.isdefend){
-                    damage=damage/2;                    
-                }
+                    if(random.Next(100)<=mult[10])atkmultiplier*=mult[11];//crit damage
+                    double damage=1;
+                    if(damage_type1==0){//phys
+                        damage=1.5*double(Patk)*atkmultiplier-double(target.Pdef)*defmultiplier;
+                        damage+=mult[4]*targetmult[7]+mult[5]*targetmult[8]+mult[6]*targetmult[9]    
+                    }
+                    else{//mag
+                        if(mult[2])atkmultiplier*=mult[2];
+                        if(targetmult[3])defmultiplier*=targetmult[3];
+                    }
+                    if(target.isdefend){
+                        damage=damage/2;                    
+                    }
             }
         }
         void defend(){
