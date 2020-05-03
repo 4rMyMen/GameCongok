@@ -1,2 +1,0 @@
-# GameCongok
-Ini FP GC
