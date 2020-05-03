@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Menu/1_MainMenu.unity
+    guid: d475585531d858e4f8b6e8b040539a53
+  - enabled: 1
+    path: Assets/Menu/1_Town.unity
+    guid: d5fa838690bfab740b3db8395077e25e
+  - enabled: 1
+    path: Assets/Menu/1_Inn.unity
+    guid: 39b8ea327a1b51c4b92b06f656ebe476
+  - enabled: 1
+    path: Assets/Menu/1_Shop.unity
+    guid: e79fbb1316b75ab4aa660832e6acfea2
+  - enabled: 1
+    path: Assets/Dungeon/lt1.unity
+    guid: f7415df2c9dc5d04b95371ac1e052745
+  - enabled: 1
+    path: Assets/Dungeon/lt2.unity
+    guid: 099ad46f4d0f17d408155f6010e24f20
+  - enabled: 1
+    path: Assets/Dungeon/lt3.unity
+    guid: 288a371e287506347b63a4876c68a31e
+  - enabled: 1
+    path: Assets/Dungeon/lt4.unity
+    guid: 8de45f0d44e27bc49a45f7b0431deffb
+  - enabled: 1
+    path: Assets/Dungeon/lt5.unity
+    guid: 3011fe88789d62d429199acc1c35973a
+  - enabled: 1
+    path: Assets/Dungeon/lt6.unity
+    guid: 078ca70ab2c330b4f8b26d0cf83ac647
+  - enabled: 1
+    path: Assets/Dungeon/lt7.unity
+    guid: 6b7eda5597f93bf4eb8d5545fba3174d
+  - enabled: 1
+    path: Assets/Dungeon/lt8.unity
+    guid: 66a5ff47b0eca8c408ac49b6e4fd7767
+  - enabled: 1
+    path: Assets/Dungeon/lt9.unity
+    guid: a150d29b67baf06438f97ea3f75d0cea
+  - enabled: 1
+    path: Assets/Dungeon/lt10.unity
+    guid: 12be81b67834514429da1e52a3dfc30f
+  - enabled: 1
+    path: Assets/Dungeon/lt11.unity
+    guid: eb4202c32fab71c479622cad27a1987b
+  - enabled: 1
+    path: Assets/Dungeon/lt12.unity
+    guid: 31b2302a5b3d5f64799a03d70ca32fd6
+  - enabled: 1
+    path: Assets/Dungeon/lt13.unity
+    guid: e02b5c5da8a1b364b8cc9f3963bded94
+  - enabled: 1
+    path: Assets/Battle/Battle_scene/Battle_scene.unity
+    guid: 1103754d16d2631478b719e759d39232
+  m_configObjects: {}
