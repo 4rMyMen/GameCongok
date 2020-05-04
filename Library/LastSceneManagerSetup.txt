@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Menu/1_MainMenu.unity
+- path: Assets/Dungeon/lt11.unity
   isLoaded: 1
   isActive: 1
