@@ -63,28 +63,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Battle\Battle_scene\HealthBarHUD.cs" />
-    <Compile Include="Assets\Battle\Battle_scene\PlayerHealthSystem.cs" />
     <Compile Include="Assets\BrokenVector\UltimateDungeonPack\Scenes\Demo\FPControls\Scripts\CharacterController.cs" />
     <Compile Include="Assets\BrokenVector\UltimateDungeonPack\Scenes\Demo\FPControls\Scripts\MouseCamLook.cs" />
     <Compile Include="Assets\BrokenVector\UltimateDungeonPack\Scripts\LightImprove.cs" />
-    <Compile Include="Assets\Dungeon\CreateDungeon.cs" />
-    <Compile Include="Assets\Dungeon\FlyCamera.cs" />
-    <Compile Include="Assets\Dungeon\FlyCamera1.cs" />
-    <Compile Include="Assets\Dungeon\FlyCamera2.cs" />
-    <Compile Include="Assets\Dungeon\FlyCamera3.cs" />
-    <Compile Include="Assets\Dungeon\FlyCamera4.cs" />
-    <Compile Include="Assets\Dungeon\FlyCamera5.cs" />
-    <Compile Include="Assets\Dungeon\FlyCamera6.cs" />
-    <Compile Include="Assets\Dungeon\FlyCamera7.cs" />
-    <Compile Include="Assets\Dungeon\Pause.cs" />
-    <Compile Include="Assets\Menu\Scripts\AnimatorFunctions.cs" />
-    <Compile Include="Assets\Menu\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Menu\Scripts\MenuButton.cs" />
-    <Compile Include="Assets\Menu\Scripts\MenuButtonController.cs" />
+    <Compile Include="Assets\Scenes\Battle\Script\HealthBarHUD.cs" />
+    <Compile Include="Assets\Scenes\Battle\Script\PlayerHealthSystem.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\CreateDungeon.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera1.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera2.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera3.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera4.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera5.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera6.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera7.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\InPauseMenu.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\Pause.cs" />
+    <Compile Include="Assets\Scenes\Menu\Scripts\AnimatorFunctions.cs" />
+    <Compile Include="Assets\Scenes\Menu\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scenes\Menu\Scripts\MenuButton.cs" />
+    <Compile Include="Assets\Scenes\Menu\Scripts\MenuButtonController.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Pixel Art Icon Pack - RPG\Shader\SH Sprite Icon Outline Color.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -100,6 +102,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Ivan/Kuliah/Semester 6/Game Cerdas/GameCongok/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
