@@ -78,7 +78,10 @@
     <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera6.cs" />
     <Compile Include="Assets\Scenes\Dungeon\Script\FlyCamera7.cs" />
     <Compile Include="Assets\Scenes\Dungeon\Script\InPauseMenu.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\MouseLook.cs" />
     <Compile Include="Assets\Scenes\Dungeon\Script\Pause.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\PlayerMovement.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\UIAppear.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\AnimatorFunctions.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuButton.cs" />
