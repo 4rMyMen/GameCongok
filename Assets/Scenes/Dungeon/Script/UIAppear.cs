@@ -9,6 +9,9 @@ public class UIAppear : MonoBehaviour
     public GameObject customImage;
     public int sceneIndex;
 
+    public GameObject loadingScreen;
+    public Slider slider;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -23,7 +26,7 @@ public class UIAppear : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene(sceneIndex);
+                LoadLevel(sceneIndex);
             }
         }    
     }
@@ -33,6 +36,27 @@ public class UIAppear : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             customImage.SetActive(false);
+        }
+    }
+
+    public void LoadLevel(int sceneIndex)
+    {
+        StartCoroutine(LoadAsync(sceneIndex));
+
+    }
+
+    IEnumerator LoadAsync(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+        loadingScreen.SetActive(true);
+
+        while (operation.isDone == false)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+
+            slider.value = progress;
+
+            yield return null;
         }
     }
 }

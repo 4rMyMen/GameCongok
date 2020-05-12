@@ -5391,7 +5391,7 @@ GameObject:
   - component: {fileID: 3259916487268871320}
   - component: {fileID: 3259916487268871321}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5424,8 +5424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 7859027891089439443}
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
 --- !u!1 &3259916487277182876
 GameObject:
   m_ObjectHideFlags: 0

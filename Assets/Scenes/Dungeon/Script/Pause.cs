@@ -10,30 +10,6 @@ public class Pause : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
-    public GameObject loadingScreen;
-    public Slider slider;
-
-    public void LoadLevel(int sceneIndex)
-    {
-        StartCoroutine(LoadAsync(sceneIndex));
-
-    }
-
-    IEnumerator LoadAsync(int sceneIndex)
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-        loadingScreen.SetActive(true);
-
-        while (operation.isDone == false)
-        {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-
-            slider.value = progress;
-
-            yield return null;
-        }
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
