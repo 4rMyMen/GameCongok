@@ -105,4 +105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customImage: {fileID: 0}
-  sceneIndex: 1
+  sceneIndex: 13
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}

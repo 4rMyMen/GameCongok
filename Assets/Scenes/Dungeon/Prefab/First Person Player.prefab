@@ -88,6 +88,8 @@ GameObject:
   - component: {fileID: 3879792525149856976}
   - component: {fileID: 3879792525149856979}
   - component: {fileID: 3879792525149856977}
+  - component: {fileID: 6492544874052082223}
+  - component: {fileID: 5490599428016768248}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Player
@@ -150,6 +152,31 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &6492544874052082223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879792525149856978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03a65e358a6ba6488fc4761d36d6650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+--- !u!114 &5490599428016768248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879792525149856978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286b99875d1ef114694034a189333396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3879792525172414396
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,22 +5,30 @@ using UnityEngine.UI;
 
 public class Coins : MonoBehaviour
 {
-    public int gold;
 
     GameObject currencyUI;
     // Start is called before the first frame update
     void Start()
     {
-        currencyUI = GameObject.Find("Money");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        currencyUI.GetComponent<Text>().text = gold.ToString();
-        if(gold < 0)
+        currencyUI = GameObject.Find("GameStatus");
+        if(currencyUI == null)
         {
-            gold = 0;
+            Debug.LogError("Error");
+            this.enabled = false;
+            return;
+        }
+        GameStatus go = currencyUI.GetComponent<GameStatus>();
+        GetComponent<Text>().text = go.gold.ToString();
+        
+        if(go.gold < 0)
+        {
+            go.gold = 0;
         }
     }
 }
