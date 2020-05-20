@@ -68,6 +68,8 @@
     <Compile Include="Assets\BrokenVector\UltimateDungeonPack\Scripts\LightImprove.cs" />
     <Compile Include="Assets\Scenes\Battle\Script\HealthBarHUD.cs" />
     <Compile Include="Assets\Scenes\Battle\Script\PlayerHealthSystem.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\CharacterCombat.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\Enemy.cs" />
     <Compile Include="Assets\Scenes\Dungeon\Script\EnemyController.cs" />
     <Compile Include="Assets\Scenes\Dungeon\Script\Equipment.cs" />
     <Compile Include="Assets\Scenes\Dungeon\Script\EquipmentManager.cs" />
@@ -84,7 +86,11 @@
     <Compile Include="Assets\Scenes\Dungeon\Script\Pause.cs" />
     <Compile Include="Assets\Scenes\Dungeon\Script\PlayerManager.cs" />
     <Compile Include="Assets\Scenes\Dungeon\Script\PlayerMovement.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\Stats\CharacterStat.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\Stats\PlayerStat.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\Stats\Stat.cs" />
     <Compile Include="Assets\Scenes\Dungeon\Script\UIAppear.cs" />
+    <Compile Include="Assets\Scenes\Dungeon\Script\Weapon.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\Coins.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\CoinsHandler.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\GameStatus.cs" />
@@ -105,6 +111,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\Fantasy Chess RPG Character - Arthur\readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />

@@ -11,6 +11,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadLevel(int sceneIndex)
     {
+        if(sceneIndex == 1)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
         StartCoroutine(LoadAsync(sceneIndex));
 
     }
