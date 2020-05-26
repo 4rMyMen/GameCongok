@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d74b2d59d87d648a9f56446460445b, type: 3}
   m_Name: Wooden Sword
   m_EditorClassIdentifier: 
-  name: New Item
+  name: Wooden Sword
   icon: {fileID: 21300000, guid: 2ddf0348701148a4d8a7c6a0f7f146b3, type: 3}
   isDefaultItem: 0
   equipSlot: 2

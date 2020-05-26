@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class EnemyController : MonoBehaviour
 
     Transform target;
     NavMeshAgent agent;
+    Animator anim;
 
-    static Animator anim;
+    public GameObject HPSlider;
+    public Slider healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +26,17 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(target.position, transform.position);
-
         
+        float distance = Vector3.Distance(target.position, transform.position);
+        if (healthBar.value <= 0)
+        {
+            HPSlider.SetActive(false);
+            return;
+        }
+
         if (distance <= lookRadius)
         {
+            HPSlider.SetActive(true);
             anim.SetBool("isAttacking", false);
             anim.SetBool("isIdle", false);
             anim.SetBool("isWalking", true);
@@ -47,6 +56,7 @@ public class EnemyController : MonoBehaviour
             anim.SetBool("isIdle", true);
             anim.SetBool("isWalking", false);
             anim.SetBool("isAttacking", false);
+            HPSlider.SetActive(false);
         }
         
     }
